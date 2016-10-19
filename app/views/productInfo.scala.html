@@ -1,0 +1,11 @@
+@(productInfo: model.ProductInfo)(price: String)
+
+@main("Product Info") {
+
+<h1>@productInfo.name</h1>
+<h1>Product Price: @price</h1>
+<h1>Product Attributes</h1>
+<div>
+    @productInfo.attributes.map{x => <div>Product key: @x._1</div><div>Product attribute: @x._2</div>}
+</div>
+}

@@ -1,0 +1,14 @@
+@(categoryName: String)(products: Seq[model.ProductInfo])
+
+@main("Product Category") {
+
+<h1>@categoryName</h1>
+<ul>
+@for(product <- products) {
+    <li>
+        <a href="@routes.Application.product(product.productId)">@product.name</a>
+    </li>
+}
+</ul>
+
+}
